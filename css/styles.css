@@ -57,6 +57,7 @@ nav {
 }
 nav h1 {
   margin: auto;
+  padding-top: 5%;
 }
 nav h1 a {
   color: #fff;
@@ -218,7 +219,8 @@ nav h1 a {
   line-height: 1.1;
 }
 #restaurant-img {
-	width: 90%;
+  width: 90%;
+  border-radius: 8%;
 }
 #restaurant-address {
   font-size: 12pt;
@@ -268,7 +270,7 @@ nav h1 a {
   width: 85%;
 }
 #reviews-list li p {
-  margin: 0 0 10px;
+  margin: 10px 0;
 }
 #restaurant-hours td {
   color: #666;

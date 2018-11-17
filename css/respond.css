@@ -1,0 +1,39 @@
+@media all and (max-width: 1199px) { 
+    /* .inside #map-container{
+        width: 50%;
+    }
+    .inside #footer{
+        width: 50%;
+    } */
+      
+}
+
+/* @media screen and (max-width: 991px) {
+    
+}
+
+@media all and (max-width: 768px) {
+    
+} */
+
+@media all and (max-width: 768px) {
+    #breadcrumb{
+        width: 100%;
+    }
+    .inside #map-container{
+        position: relative;
+        width: 100%;
+        height: 400px;
+        margin: 0 10px;
+    }
+    .inside #footer{
+        width: 100%;
+    }
+    #restaurant-container{
+        width: 100%;
+        margin: 0 8%;
+    }
+    #reviews-container{
+        width: 100%;
+    }
+}
