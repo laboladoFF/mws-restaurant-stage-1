@@ -5,6 +5,22 @@ var newMap
 var markers = []
 
 /*============== 注册ServiceWorker ================*/
+// /*== bad ==*/
+// window.addEventListener('DOMContentLoaded', function(){
+//   navigator.serviceWorker.register('/sw.js').then(function(registration){
+
+//   }).catch(function(err){
+//       console.log('ServiceWorker registration failed:', err);
+//   });
+// })
+
+// /*== good ==*/
+// if('serviceWorker' in navigator){
+//   //判断浏览器支持情况
+//   window.addEventListener('load', function(){
+//     navigator.serviceWorker.register('/sw.js');
+//   })
+// }
 
 if('serviceWorker' in navigator){
   navigator.serviceWorker.register('/sw.js').then(function(registration){
