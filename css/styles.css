@@ -15,7 +15,8 @@ body {
 ul, li {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
-	color: #333;
+  color: #333;
+  /* float: left; */
 }
 a {
 	color: orange;
@@ -47,6 +48,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   padding: 25px;
   text-align: center;
   text-transform: uppercase;
+  /* bottom: 0; */
 }
 /* ====================== Navigation ====================== */
 nav {
@@ -57,7 +59,7 @@ nav {
 }
 nav h1 {
   margin: auto;
-  padding-top: 5%;
+  padding-top: 25px;
 }
 nav h1 a {
   color: #fff;
@@ -115,8 +117,9 @@ nav h1 a {
   color: white;
   font-size: 1rem;
   font-weight: normal;
-  line-height: 1;
-  margin: 0 20px;
+  line-height: 3;
+  letter-spacing: 3px;
+  margin: 5px 20px 0;
 }
 .filter-options select {
   background-color: white;
@@ -147,10 +150,11 @@ nav h1 a {
   padding: 0 30px 25px;
   text-align: left;
   width: 270px;
+  float: left;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
-  display: block;
+  display: inline-block;
   margin: 0;
   max-width: 100%;
   min-height: 248px;
