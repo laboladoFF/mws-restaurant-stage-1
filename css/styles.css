@@ -5,7 +5,8 @@ body,td,th,p{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
 	color: #333;
-	line-height: 1.5;
+  line-height: 1.5;
+  position: relative;
 }
 body {
 	background-color: #fdfdfd;
@@ -41,6 +42,9 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   min-height: 100%;
 }
 #footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
   background-color: #444;
   color: #aaa;
   font-size: 8pt;
@@ -48,7 +52,6 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   padding: 25px;
   text-align: center;
   text-transform: uppercase;
-  /* bottom: 0; */
 }
 /* ====================== Navigation ====================== */
 nav {
@@ -140,6 +143,8 @@ nav h1 a {
   margin: 0;
   padding: 30px 15px 60px;
   text-align: center;
+  overflow:hidden;
+  zoom:1;
 }
 #restaurants-list li {
   background-color: #fff;
@@ -208,8 +213,8 @@ nav h1 a {
   width: 100%;
 }
 .inside #footer {
-  bottom: 0;
-  position: absolute;
+  /* bottom: 0;
+  position: absolute; */
   width: 50%;
 }
 #restaurant-name {

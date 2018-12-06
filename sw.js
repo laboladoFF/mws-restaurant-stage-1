@@ -4,8 +4,20 @@ self.addEventListener('install', function(event){
     event.waitUntil(
         //currentCacheName 对应调试工具中高亮部分，缓存名称
         //调用 cache.open 方法才能缓存文件
+         var currentCacheName = 'restaurant-v1';
+        
         caches.open(currentCacheName).then(function(cache){
             //arrayOfFilesToCache 为缓存文件的数组
+
+            var arrayOfFilesToCache = [
+                'css/styles.css',
+                'css/respond.css',
+                'data/restaurants.json',
+                'js/main.js',
+                'js/dbhelper.js',
+                'js/restaurant_info.js',
+                'img/1.jpg'
+            ]
             return cache.addAll(arrayOfFilesToCache)
         })
     );
@@ -16,7 +28,7 @@ self.addEventListener('install', function(event){
 
 self.addEventListener('activate', function(event){
     event.waitUntil(
-        caches.keys().then(function(cacheName){
+        caches.keys().then(function(cacheNames){
             return Promise.all(
                 cacheNames.filter(function(cacheName){
                     return cacheName != currentCacheName;
@@ -64,7 +76,7 @@ self.addEventListener('fetch', function(event){
                         */
                         var responseToCache = response.clone();
 
-                        caches.open(CACHE_NAME)
+                        caches.open(currentCacheName)
                             .then(function(cache){
                                 cache.put(event.request, responseToCache);
                             });
