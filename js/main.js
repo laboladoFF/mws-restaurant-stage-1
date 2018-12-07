@@ -153,6 +153,10 @@ updateRestaurants = () => {
   })
 }
 
+navigator.serviceWorker.addEventListener('controllerchange', () => {
+  window.location.reload();
+})
+
 /**
  * Clear current restaurants, their HTML and remove their map markers.
  */
@@ -190,7 +194,7 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  image.alt = "An image of a restaurant nanmed CHINESE FOOD";
+  image.alt = restaurant.alt;
   li.append(image);
 
   const name = document.createElement('h2');
