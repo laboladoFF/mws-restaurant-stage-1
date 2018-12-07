@@ -1,3 +1,7 @@
+/** 
+ * (〃'▽'〃)想问下 fillRestaurantHoursHTML 这个函数里创建的元素的样式是通过 tagname 来获得的吗？
+ * 或者image.className = 'restaurant-img'这样获得样式吗？谢谢。
+*/
 let restaurant;
 var newMap;
 
