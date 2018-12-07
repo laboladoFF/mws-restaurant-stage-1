@@ -18,16 +18,16 @@
   </header>
 
   <main id="maincontent">
-    <section id="map-container">
-      <div id="map" role="application"></div>
+    <section id="map-container" aria-label="地图">
+      <div id="map" role="application" ></div>
     </section>
-    <section role="section" aria-label="section">
-      <div class="filter-options">
+    <section role="section">
+      <div class="filter-options" aria-label="选择框">
         <h2>Filter Results</h2>
-        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" role="select">
+        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" role="menu" aria-label="区域">
           <option value="all" role="option" aria-checked="true">All Neighborhoods</option>
         </select>
-        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" role="select">
+        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" role="menu" aria-label="菜系">
           <option value="all" role="option" aria-checked="true">All Cuisines</option>
         </select>
       </div>
